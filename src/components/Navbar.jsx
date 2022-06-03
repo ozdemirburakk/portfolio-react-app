@@ -9,7 +9,7 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Logo from '../assets/logo.png';
 import { Link } from 'react-scroll';
-
+import cv from '../assets/file/burakcv.pdf'
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
@@ -50,7 +50,7 @@ const Navbar = () => {
       </ul>
 
       {/* Hamburger */}
-      <div onClick={handleClick} className='md:hidden z-10'>
+      <div onClick={handleClick} className='z-10 md:hidden'>
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
 
@@ -98,7 +98,7 @@ const Navbar = () => {
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
             <a
-              className='flex justify-between items-center w-full text-gray-300'
+              className='flex items-center justify-between w-full text-gray-300'
               href='https://www.linkedin.com/in/burakozdmr/' target='_blank' rel='noreferrer'
             >
               Linkedin <FaLinkedin size={30} />
@@ -106,14 +106,14 @@ const Navbar = () => {
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
             <a
-              className='flex justify-between items-center w-full text-gray-300'
+              className='flex items-center justify-between w-full text-gray-300'
               href='https://github.com/ozdemirburakk'  target='_blank' rel='noreferrer'
             >
               Github <FaGithub size={30} />
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-          <Link  className='flex justify-between items-center w-full text-gray-300'  to='contact' smooth={true} duration={500}>
+          <Link  className='flex items-center justify-between w-full text-gray-300'  to='contact' smooth={true} duration={500}>
           Email
           <HiOutlineMail size={30} />
           </Link>
@@ -123,8 +123,8 @@ const Navbar = () => {
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
             <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='/'
+              className='flex items-center justify-between w-full text-gray-300'
+              href={cv} target='_blank' rel='noreferrer'
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>
